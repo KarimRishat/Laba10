@@ -10,12 +10,14 @@ namespace Metodichaka
     {
         static void Main(string[] args)
         {
-            //ACipher aCipher = new ACipher();
+            ACipher aCipher = new ACipher();
             Console.WriteLine("Input:");
-            char s = (int)Console.Read();
-            //s = aCipher.encode(s);
-            //s = aCipher.decode(s);
-            Console.WriteLine((int)((char)s));
+            string s = Console.ReadLine();
+            s = aCipher.encode(s);
+            s = aCipher.decode(s);
+            BCipher bCipher = new BCipher();
+            s = bCipher.encode(s);
+            s = bCipher.decode(s);
             Console.ReadKey();
         }
     }
